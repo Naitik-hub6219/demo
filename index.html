@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Riddhi ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff7fa;
+    color: #4a3039;
+    overflow-x: hidden;
+}
+
+/* ---------- COMMON ---------- */
+
+section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container {
+    width: min(100%, 950px);
+    margin: auto;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'DM Serif Display', serif;
+}
+
+h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    margin-bottom: 25px;
+}
+
+p {
+    line-height: 1.9;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    background:
+        radial-gradient(circle at 20% 20%, #ffdce8, transparent 30%),
+        radial-gradient(circle at 80% 80%, #eadcff, transparent 30%),
+        linear-gradient(135deg, #fff8fb, #fff0f5);
+}
+
+.hero h1 {
+    font-size: clamp(4rem, 12vw, 8rem);
+    color: #c65378;
+    animation: fadeUp 1.5s ease;
+}
+
+.hero p {
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    margin: 20px auto 35px;
+    max-width: 600px;
+    animation: fadeUp 2s ease;
+}
+
+.btn {
+    border: none;
+    padding: 16px 30px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #e66b91, #c84f78);
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(200, 79, 120, 0.25);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(200, 79, 120, 0.35);
+}
+
+/* ---------- CONFESSION ---------- */
+
+.confession {
+    background: #fff;
+}
+
+.message-box {
+    max-width: 750px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 30px;
+    background: rgba(255, 235, 242, 0.65);
+    box-shadow: 0 20px 60px rgba(120, 60, 80, 0.08);
+    font-size: 1.05rem;
+}
+
+/* ---------- MEMORIES ---------- */
+
+.memories {
+    background: linear-gradient(135deg, #fff3f7, #f8f1ff);
+}
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.memory {
+    padding: 35px 25px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.75);
+    box-shadow: 0 15px 40px rgba(80, 50, 70, 0.08);
+    transition: 0.4s;
+}
+
+.memory:hover {
+    transform: translateY(-10px) rotate(1deg);
+}
+
+.memory .emoji {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.memory h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+/* ---------- LIKES ---------- */
+
+.likes {
+    background: #fff;
+}
+
+.likes-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 750px;
+    margin: 35px auto;
+}
+
+.like {
+    padding: 14px 22px;
+    border-radius: 50px;
+    background: #fff0f5;
+    color: #b74f70;
+    transition: 0.3s;
+}
+
+.like:hover {
+    transform: scale(1.07);
+    background: #ffe0ea;
+}
+
+/* ---------- PROPOSAL ---------- */
+
+.proposal {
+    background:
+        radial-gradient(circle at 30% 20%, rgba(255,180,205,.25), transparent 30%),
+        radial-gradient(circle at 70% 80%, rgba(210,180,255,.25), transparent 30%),
+        linear-gradient(135deg, #432b39, #251c29);
+    color: white;
+}
+
+.proposal h2 {
+    color: #ffd5e2;
+}
+
+.question {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    color: white;
+    margin: 30px 0 45px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.yes-btn {
+    background: linear-gradient(135deg, #ff719d, #d94d7a);
+}
+
+.love-btn {
+    background: linear-gradient(135deg, #a979e8, #7652c7);
+}
+
+.answer {
+    display: none;
+    margin-top: 50px;
+    animation: pop 1s ease;
+}
+
+.answer h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #ffd5e2;
+}
+
+/* ---------- FRIENDSHIP ---------- */
+
+.friendship {
+    background: #fff8fb;
+}
+
+.friendship-box {
+    max-width: 750px;
+    padding: 45px;
+    border-radius: 30px;
+    background: white;
+    box-shadow: 0 20px 60px rgba(120,60,80,.08);
+}
+
+/* ---------- MUSIC ---------- */
+
+.music {
+    min-height: auto;
+    padding: 50px 20px;
+    background: #fff;
+}
+
+.music-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.music-title {
+    font-weight: 500;
+}
+
+/* ---------- FINAL ---------- */
+
+.final {
+    min-height: 80vh;
+    background:
+        radial-gradient(circle at 50% 30%, #ffdce8, transparent 35%),
+        #fff5f8;
+}
+
+.final h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    color: #c65378;
+}
+
+.signature {
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+/* ---------- FLOATING HEARTS ---------- */
+
+.heart {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    animation: floatHeart 4s linear forwards;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.8) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: scale(.5);
+    }
+    70% {
+        transform: scale(1.08);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ---------- CONFETTI ---------- */
+
+.confetti {
+    position: fixed;
+    width: 8px;
+    height: 14px;
+    top: -20px;
+    z-index: 9998;
+    animation: confettiFall 3s linear forwards;
+}
+
+@keyframes confettiFall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 750px) {
+
+    section {
+        padding: 65px 18px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .message-box,
+    .friendship-box {
+        padding: 28px 22px;
+    }
+
+    .question {
+        line-height: 1.2;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="container">
+        <h1>Hey Riddhi… ❤️</h1>
+
+        <p>
+            There’s something I’ve been wanting to tell you for a while.
+        </p>
+
+        <button class="btn" onclick="scrollToSection('confession')">
+            Open This 💌
+        </button>
+    </div>
+</section>
+
+
+<!-- CONFESSION -->
+<section class="confession" id="confession">
+    <div class="container">
+
+        <h2>First, I Want To Be Honest With You…</h2>
+
+        <div class="message-box">
+
+            <p>
+                I’ve started liking you over the past four months,
+                and I wanted to finally be honest about it.
+                <br><br>
+
+                And I also want you to know something about what happened
+                with Abhay. Me liking you wasn’t the reason I provoked you
+                against him. Honestly, if someone else had been in that
+                situation, I probably would have reacted the same way.
+                <br><br>
+
+                I don’t want you to misunderstand my intentions or think
+                I did it simply because I liked you.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- MEMORIES -->
+<section class="memories" id="memories">
+    <div class="container">
+
+        <h2>Some Little Moments I Really Like Remembering… 🫶</h2>
+
+        <div class="memory-grid">
+
+            <div class="memory">
+                <div class="emoji">🎴</div>
+                <h3>UNO</h3>
+                <p>
+                    Those times when we played UNO.
+                    Somehow even a simple game became a memory worth remembering.
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="emoji">✍️</div>
+                <h3>Drawings On My Hand</h3>
+                <p>
+                    The times you used to draw things on my hand.
+                    They were such small moments, but somehow they stayed with me.
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="emoji">🛍️</div>
+                <h3>Zudio Day</h3>
+                <p>
+                    That day when all five of us went to Zudio.
+                    Nothing extraordinary happened, but it became one of those
+                    random days that I still remember fondly.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- LIKES -->
+<section class="likes">
+    <div class="container">
+
+        <h2>Things I Like About You… 🌷</h2>
+
+        <div class="likes-list">
+
+            <div class="like">Your kindness ❤️</div>
+            <div class="like">Your behaviour</div>
+            <div class="like">Your eyes 👀</div>
+            <div class="like">The little things you do</div>
+            <div class="like">The way you treat people</div>
+            <div class="like">Your little moments</div>
+
+        </div>
+
+        <p>
+            There are probably many more things I could write here…
+            but I think some things are better said from the heart.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- PROPOSAL -->
+<section class="proposal" id="proposal">
+
+    <div class="container">
+
+        <h2>Okay… I Think I’ve Said Enough.</h2>
+
+        <p style="font-size:1.2rem;">
+            Riddhi, I have one question for you…
+        </p>
+
+        <div class="question">
+            Will you be my girlfriend? ❤️
+        </div>
+
+        <div class="buttons">
+
+            <button class="btn yes-btn" onclick="sayYes()">
+                Yes ❤️
+            </button>
+
+            <button class="btn love-btn" onclick="sayYes()">
+                I’d love to 🥹
+            </button>
+
+        </div>
+
+        <div class="answer" id="answer">
+
+            <h2>
+                You just made your<br>
+                Blushing Baby very, very happy. ❤️
+            </h2>
+
+            <p>
+                Thank you for hearing my heart.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FRIENDSHIP -->
+<section class="friendship">
+
+    <div class="container">
+
+        <h2>One More Thing… 🤍</h2>
+
+        <div class="friendship-box">
+
+            <p>
+                And whatever your answer is, I want you to know something important.
+                <br><br>
+
+                I never want this proposal to become a reason for our friendship
+                to end. What we already have means a lot to me, and I will always
+                value the bond and memories we share.
+                <br><br>
+
+                I hope that no matter what happens, we can continue to respect,
+                understand, and be there for each other.
+                <br><br>
+
+                Because having you in my life is something I’ll always be
+                grateful for. ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MUSIC -->
+<section class="music">
+
+    <div class="container">
+
+        <div class="music-player">
+
+            <span>🎵</span>
+
+            <span class="music-title">
+                Better Together
+            </span>
+
+            <button class="btn" onclick="toggleMusic()" id="musicButton">
+                ▶ Play
+            </button>
+
+        </div>
+
+        <!--
+        IMPORTANT:
+        To use your own music, replace the URL below with
+        a direct audio file URL.
+
+        Example:
+        const MUSIC_URL = "https://example.com/song.mp3";
+        -->
+
+        <audio id="music" loop></audio>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+<section class="final">
+
+    <div class="container">
+
+        <h1>No matter what happens next…</h1>
+
+        <p style="font-size:1.3rem; margin-top:25px;">
+            I’m really glad I met you, Riddhi. ❤️
+        </p>
+
+        <div class="signature">
+            — Blushing Baby
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* ==========================
+   CONFIGURATION
+========================== */
+
+const CONFIG = {
+    recipientName: "Riddhi Jain",
+    senderName: "Blushing Baby",
+    musicTitle: "Better Together",
+
+    /*
+       Add your own direct MP3/audio URL here if you want music.
+
+       Example:
+       musicUrl: "https://example.com/song.mp3"
+    */
+
+    musicUrl: ""
+};
+
+
+/* ==========================
+   SMOOTH SCROLL
+========================== */
+
+function scrollToSection(id) {
+
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+/* ==========================
+   PROPOSAL
+========================== */
+
+function sayYes() {
+
+    const answer = document.getElementById("answer");
+
+    answer.style.display = "block";
+
+    document.querySelectorAll(".buttons button").forEach(button => {
+        button.disabled = true;
+        button.style.opacity = "0.7";
+        button.style.cursor = "default";
+    });
+
+    createHearts();
+    createConfetti();
+
+}
+
+
+/* ==========================
+   FLOATING HEARTS
+========================== */
+
+function createHearts() {
+
+    for (let i = 0; i < 35; i++) {
+
+        setTimeout(() => {
+
+            const heart = document.createElement("div");
+
+            heart.className = "heart";
+            heart.innerHTML = ["❤️","💗","💕","💖","💓"][Math.floor(Math.random() * 5)];
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.bottom = "-30px";
+            heart.style.fontSize = (15 + Math.random() * 25) + "px";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 4000);
+
+        }, i * 80);
+
+    }
+
+}
+
+
+/* ==========================
+   CONFETTI
+========================== */
+
+function createConfetti() {
+
+    for (let i = 0; i < 100; i++) {
+
+        const piece = document.createElement("div");
+
+        piece.className = "confetti";
+
+        piece.style.left = Math.random() * 100 + "vw";
+        piece.style.animationDelay = Math.random() * 1.5 + "s";
+
+        const shapes = ["❤️", "💗", "✨", "💕", "★"];
+
+        piece.innerHTML =
+            shapes[Math.floor(Math.random() * shapes.length)];
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+            piece.remove();
+        }, 4500);
+
+    }
+
+}
+
+
+/* ==========================
+   MUSIC
+========================== */
+
+const music = document.getElementById("music");
+const musicButton = document.getElementById("musicButton");
+
+if (CONFIG.musicUrl) {
+    music.src = CONFIG.musicUrl;
+}
+
+function toggleMusic() {
+
+    if (!CONFIG.musicUrl) {
+
+        alert(
+            "Add your music URL in the CONFIG section of this HTML file first."
+        );
+
+        return;
+    }
+
+    if (music.paused) {
+
+        music.play();
+
+        musicButton.innerHTML = "⏸ Pause";
+
+    } else {
+
+        music.pause();
+
+        musicButton.innerHTML = "▶ Play";
+
+    }
+
+}
+
+
+/* ==========================
+   RANDOM BACKGROUND HEARTS
+========================== */
+
+setInterval(() => {
+
+    if (Math.random() > 0.65) {
+
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+        heart.innerHTML = "♡";
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.bottom = "-20px";
+        heart.style.fontSize = "20px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 4000);
+
+    }
+
+}, 1500);
+
+</script>
+
+</body>
+</html>
